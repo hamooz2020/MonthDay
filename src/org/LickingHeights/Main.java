@@ -32,7 +32,83 @@ public class Main {
 
     }
 
-    private static void nurseryRhyme(int a) {
+    private static void month(int dateM, int dateY) {
+        switch (dateM) {
+            case 1:
+                System.out.println("You were born in January which has 31 days");
+                break;
+            case 2:
+                if (dateY % 400 == 0) {
+                    System.out.println("You were born in Febraury which has 29 days");
+                } else if (dateY % 10 == 0) {
+                    System.out.println("You were born in Febraury which has 28 days");
+                } else if (dateY % 4 == 0) {
+                    System.out.println("You were born in Febraury which has 29 days");
+                } else {
+                    System.out.println("You were born in Febraury which has 28 days");
+                }
+                    break;
+                    case 3:
+                        System.out.println("You were born in March which has 31 days");
+                        break;
+                    case 4:
+                        System.out.println("You were born in April which has 30 days");
+                        break;
+                    case 5:
+                        System.out.println("You were born in May which has 31 days");
+                        break;
+                    case 6:
+                        System.out.println("You were born in June which has 3 days");
+                        break;
+                    case 7:
+                        System.out.println("You were born in July which has 31 days");
+                        break;
+                    case 8:
+                        System.out.println("You were born in August which has 31 days");
+                        break;
+                    case 9:
+                        System.out.println("You were born in September which has 30 days");
+                        break;
+                    case 10:
+                        System.out.println("You were born in October which has 31 days");
+                        break;
+                    case 11:
+                        System.out.println("You were born in November which has 30 days");
+                        break;
+                    case 12:
+                        System.out.println("You were born in December which has 31 days");
+                        break;
+                }
+        }
+
+
+
+
+
+    private static void nurseryRhyme(int poem) {
+        switch (poem) {
+            case 0:
+                System.out.println("You work very hard.");
+                break;
+            case 1:
+                System.out.println("You are wise and fair.");
+                break;
+            case 2:
+                System.out.println("You're a cutie");
+                break;
+            case 3:
+                System.out.println("You're a very happy person.");
+                break;
+            case 4:
+                System.out.println("You're astonishing.");
+                break;
+            case 5:
+                System.out.println("You are full of grace.");
+                break;
+            case 6:
+                System.out.println("You are loving and graceful");
+                break;
+        }
     }
 
     private static int equation(int m, int q, int k) {
@@ -46,7 +122,8 @@ public class Main {
 
         j = (k / 100);
 
-        w = (q + ((13 * (m + 1) j / 5)+modYear + (modYear / 4) + (j / 4) + 5 * j) %7;
+        w = (q + (13 * (m + 1) / 5)+modYear + (modYear / 4) + (j / 4) + 5 * j)%7;
+        return w;
     }
 
     public static int birthMonth(int dateM) {
@@ -88,54 +165,14 @@ public class Main {
                 break;
         }
 
-        public static void month ( int dateM, int dateY){
-            switch (dateM) {
-                case 1:
-                    System.out.println("You were born in January which has 31 days");
-                    break;
-                case 2:
-                    if (dateY % 400 == 0) {
-                        System.out.println("You were born in Febraury which has 29 days");
-                    } else if (dateY % 10 == 0) {
-                        System.out.println("You were born in Febraury which has 28 days");
-                    } else if (dateY % 4 == 0) {
-                        System.out.println("You were born in Febraury which has 29 days");
-                    } else {
-                        System.out.println("You were born in Febraury which has 28 days");
-                            break;
-                        case 3:
-                            System.out.println("You were born in March which has 31 days");
-                            break;
-                        case 4:
-                            System.out.println("You were born in April which has 30 days");
-                            break;
-                        case 5:
-                            System.out.println("You were born in May which has 31 days");
-                            break;
-                        case 6:
-                            System.out.println("You were born in June which has 3 days");
-                            break;
-                        case 7:
-                            System.out.println("You were born in July which has 31 days");
-                            break;
-                        case 8:
-                            System.out.println("You were born in August which has 31 days");
-                            break;
-                        case 9:
-                            System.out.println("You were born in September which has 30 days");
-                            break;
-                        case 10:
-                            System.out.println("You were born in October which has 31 days");
-                            break;
-                        case 11:
-                            System.out.println("You were born in November which has 30 days");
-                            break;
-                        case 12:
-                            System.out.println("You were born in December which has 31 days");
-                            break;
-                    }
-            }
-        }
+
     }
 }
+
+
+
+
+
+
+
 
