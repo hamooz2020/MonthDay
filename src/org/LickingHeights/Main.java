@@ -15,10 +15,11 @@ public class Main {
             System.out.println("\033[4;30m" + "find out who you are.");
 
             System.out.println("Type in the month you were born in.");
-            q = keyboard.nextInt();
+            m = keyboard.nextInt();
 
             System.out.println("Type in the day you were born in.");
-            m = keyboard.nextInt();
+            q = keyboard.nextInt();
+
 
             System.out.println("Type in the year you were born in." + "\033[0;96m");
             k = keyboard.nextInt();
@@ -33,6 +34,7 @@ public class Main {
     }
 
     private static void month(int dateM, int dateY) {
+
         switch (dateM) {
             case 1:
                 System.out.println("You were born in January which has 31 days");
@@ -110,11 +112,16 @@ public class Main {
                 break;
         }
     }
+        //if month born is less than 2 than the year(K) will decrease by 1 and the month will be counted as previous year for example jan is 13 and feb is 14
 
     private static int equation(int m, int q, int k) {
         int j, modYear;
         int w;
         k = birthYear(k, m);
+        if (m <= 2) {
+        
+
+        }
 
         m = birthMonth(m);
 
@@ -122,7 +129,7 @@ public class Main {
 
         j = (k / 100);
 
-        w = (q + (13 * (m + 1) / 5)+modYear + (modYear / 4) + (j / 4) + 5 * j)%7;
+        w = (q + ((13 * (m + 1)) / 5)+modYear + (modYear / 4) + (j / 4) + 5 * j)%7;
         return w;
     }
 
@@ -134,10 +141,10 @@ public class Main {
     }
 
     public static int birthYear(int dateY, int dateM) {
-        if (dateM <= 2) {
-            dateY = dateY - 1;
-        }
-        return dateY;
+        if (dateY % 4 == 0 || dateY%100 ==0 || dateY%400 ==0) {
+            return 29;
+        }else
+        return 28;
     }
 
     public static void answer(int dateW) {
@@ -162,7 +169,7 @@ public class Main {
                 break;
             case 6:
                 System.out.println("You are Friday");
-                break;
+
         }
 
 
